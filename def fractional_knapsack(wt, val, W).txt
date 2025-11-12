@@ -1,0 +1,17 @@
+def fractional_knapsack(wt, val, W):
+    ratio = [[v/w, w, v] for v, w in zip(val, wt)]
+    ratio.sort(reverse=True)
+    total = 0
+    for r, w, v in ratio:
+        if W >= w:
+            W -= w
+            total += v
+        else:
+            total += r * W
+            break
+    return total
+
+wt = [10, 20, 30]
+val = [60, 100, 120]
+W = 50
+print("Maximum profit:", fractional_knapsack(wt, val, W))

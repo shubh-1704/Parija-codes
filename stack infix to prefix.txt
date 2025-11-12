@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+#include <cctype>
+using namespace std;
+
+struct Node{char d;Node*next;};Node*top=NULL;
+void push(char x){Node*t=new Node{x,top};top=t;}
+char pop(){char x=top->d;Node*t=top;top=top->next;delete t;return x;}
+int pre(char c){return (c=='+'||c=='-')?1:(c=='*'||c=='/')?2:0;}
+
+string infixToPrefix(string in){
+    reverse(in.begin(),in.end());
+    for(char &c:in) if(c=='(')c=')'; else if(c==')')c='(';
+    string p="";
+    for(char c:in){
+        if(isalnum(c)) p+=c;
+        else if(c=='(') push(c);
+        else if(c==')'){while(top&&top->d!='(')p+=pop();pop();}
+        else{while(top&&pre(top->d)>=pre(c))p+=pop();push(c);}
+    }
+    while(top)p+=pop();
+    reverse(p.begin(),p.end());
+    return p;
+}
+
+int main(){
+    string in;cout<<"Enter infix: ";cin>>in;
+    cout<<"Prefix: "<<infixToPrefix(in);
+}

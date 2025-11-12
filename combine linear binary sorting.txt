@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+struct Student { int id; char name[50]; float cgpa; };
+
+void bubbleSort(Student s[], int n){
+    for(int i=0;i<n-1;i++)
+        for(int j=0;j<n-i-1;j++)
+            if(s[j].id > s[j+1].id) swap(s[j], s[j+1]);
+}
+
+int linearSearch(Student s[], int n, int id){
+    for(int i=0;i<n;i++) if(s[i].id==id) return i;
+    return -1;
+}
+
+int binarySearch(Student s[], int n, int id){
+    int l=0,h=n-1;
+    while(l<=h){
+        int m=(l+h)/2;
+        if(s[m].id==id) return m;
+        if(s[m].id<id) l=m+1; else h=m-1;
+    }
+    return -1;
+}
+
+int main(){
+    int n=5; Student *s=new Student[n];
+    for(int i=0;i<n;i++){ 
+        cout<<"ID:";cin>>s[i].id; 
+        cout<<"Name:";cin>>s[i].name; 
+        cout<<"CGPA:";cin>>s[i].cgpa; 
+    }
+
+    cout<<"\nAll Records:\n";
+    for(int i=0;i<n;i++) cout<<s[i].id<<" "<<s[i].name<<" "<<s[i].cgpa<<endl;
+
+    int id; cout<<"\nEnter ID to search:"; cin>>id;
+
+    int p=linearSearch(s,n,id);
+    if(p!=-1) cout<<"Found by Linear Search: "<<s[p].name<<endl;
+    else cout<<"Not Found by Linear Search\n";
+
+    bubbleSort(s,n);
+    p=binarySearch(s,n,id);
+    if(p!=-1) cout<<"Found by Binary Search: "<<s[p].name<<endl;
+    else cout<<"Not Found by Binary Search\n";
+
+    delete[] s;
+}

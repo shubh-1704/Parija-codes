@@ -1,0 +1,29 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.left = self.right = None
+
+def insert(root, key):
+    if root is None:
+        return Node(key)
+    if key < root.data:
+        root.left = insert(root.left, key)
+    else:
+        root.right = insert(root.right, key)
+    return root
+
+def display_parents(root):
+    if root:
+        if root.left or root.right:
+            print(root.data, end=" ")
+        display_parents(root.left)
+        display_parents(root.right)
+
+# Main program
+root = None
+nodes = [50, 30, 70, 20, 40, 60, 80, 10]  # 8 nodes
+for n in nodes:
+    root = insert(root, n)
+
+print("Parent Nodes in the BST:")
+display_parents(root)

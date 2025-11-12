@@ -1,0 +1,246 @@
+Perfect 👌 — you’re asking for the **basic coding concepts and key points** that external examiners usually ask in DSA vivas or practicals.
+
+Here’s a **complete, short, and clear summary** — you can easily revise and speak confidently from this 👇
+
+---
+
+## 🧠 **BASICS OF CODES IN DSA (for viva & practicals)**
+
+---
+
+### ⚙️ **1. What is a Program?**
+
+A **program** is a set of instructions written to perform a specific task.
+Example:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World!";
+    return 0;
+}
+```
+
+➡️ This prints a message on the screen.
+
+---
+
+### 📦 **2. What is a Data Structure?**
+
+A **data structure** is a way to store and organize data so it can be used efficiently.
+Examples:
+
+* Array
+* Linked List
+* Stack
+* Queue
+* Tree
+* Graph
+* Hash Table
+
+➡️ Each has different uses and operations.
+
+---
+
+### 💡 **3. Algorithm**
+
+An **algorithm** is a step-by-step method to solve a problem.
+Example: Algorithm to add two numbers:
+
+1. Take two numbers as input
+2. Add them
+3. Display the result
+
+---
+
+### ⚙️ **4. Basic Program Structure**
+
+Every program generally has:
+
+1. **Header files** – e.g., `#include <iostream>`
+2. **Main function** – where the program starts
+3. **Variables** – to store data
+4. **Input / Output statements**
+5. **Logic or operations**
+
+---
+
+### 📘 **5. Important Concepts in Code**
+
+| Concept       | Meaning                               | Example                 |
+| ------------- | ------------------------------------- | ----------------------- |
+| **Variable**  | Name for storing data                 | `int x = 10;`           |
+| **Data Type** | Type of data (int, float, char, etc.) | `float avg;`            |
+| **Array**     | Collection of same type of elements   | `int arr[5];`           |
+| **Function**  | Block of code that performs a task    | `int add(int a, int b)` |
+| **Loop**      | Repeats code                          | `for`, `while`          |
+| **Condition** | Decision making                       | `if-else`               |
+| **Pointer**   | Stores address of a variable          | `int *ptr = &x;`        |
+
+---
+
+### 🔁 **6. Common Coding Structures**
+
+#### (a) **If–Else Example**
+
+```cpp
+if (x > 0)
+    cout << "Positive";
+else
+    cout << "Negative";
+```
+
+#### (b) **Loop Example**
+
+```cpp
+for (int i = 0; i < 5; i++)
+    cout << i << " ";
+```
+
+#### (c) **Function Example**
+
+```cpp
+int add(int a, int b) {
+    return a + b;
+}
+```
+
+---
+
+### 🧱 **7. Array Example**
+
+```cpp
+int arr[5] = {1, 2, 3, 4, 5};
+for(int i=0; i<5; i++)
+    cout << arr[i] << " ";
+```
+
+➡️ Used for storing and accessing multiple values easily.
+
+---
+
+### 🔗 **8. Linked List (Basic Idea)**
+
+A **Linked List** is a list of nodes, each node having:
+
+* **Data**
+* **Pointer** to next node
+
+Example node structure:
+
+```cpp
+struct Node {
+    int data;
+    Node* next;
+};
+```
+
+---
+
+### 🧮 **9. Stack**
+
+* Follows **LIFO** (Last In First Out)
+* Operations:
+
+  * **push()** – Insert element
+  * **pop()** – Remove element
+    Example:
+
+```cpp
+stack<int> s;
+s.push(10);
+s.push(20);
+s.pop();
+```
+
+---
+
+### 🚦 **10. Queue**
+
+* Follows **FIFO** (First In First Out)
+* Operations:
+
+  * **enqueue()** – Insert element
+  * **dequeue()** – Remove element
+
+Example:
+
+```cpp
+queue<int> q;
+q.push(10);
+q.push(20);
+q.pop();
+```
+
+---
+
+### 🌳 **11. Tree (Basic Concept)**
+
+* Hierarchical structure with **root**, **branches**, and **leaves**
+* Example: Binary Tree → Each node has **0, 1, or 2 children**
+
+Traversals:
+
+* **Inorder (Left–Root–Right)**
+* **Preorder (Root–Left–Right)**
+* **Postorder (Left–Right–Root)**
+
+---
+
+### 🔗 **12. Graph (Basic Concept)**
+
+* Collection of **vertices (nodes)** and **edges (connections)**
+  Used for representing networks like roads, maps, or social connections.
+  Stored using:
+* **Adjacency Matrix**
+* **Adjacency List**
+
+---
+
+### 🧩 **13. Common Algorithms**
+
+| Algorithm         | Used For                 | Example    |
+| ----------------- | ------------------------ | ---------- |
+| **Linear Search** | Search in unsorted list  | O(n)       |
+| **Binary Search** | Search in sorted list    | O(log n)   |
+| **Bubble Sort**   | Sorting                  | O(n²)      |
+| **Merge Sort**    | Divide & Conquer sorting | O(n log n) |
+| **DFS / BFS**     | Graph traversal          | —          |
+
+---
+
+### 🧮 **14. Time and Space Complexity**
+
+Used to measure **efficiency** of code:
+
+* **O(1):** Constant time
+* **O(n):** Linear time
+* **O(n²):** Quadratic time
+* **O(log n):** Logarithmic time
+
+Example:
+
+```cpp
+for(int i=0; i<n; i++)  // O(n)
+    cout << i;
+```
+
+---
+
+### ⚡ **15. Output Questions Practice**
+
+External may ask:
+
+* “What will be the output of this code?”
+* “What is the time complexity?”
+* “Why use a linked list instead of an array?”
+* “Difference between stack and queue?”
+* “Explain traversal of tree.”
+
+Be ready with short, clear answers.
+
+---
+
+Would you like me to create a **1-page quick revision sheet (PDF)** with these points neatly arranged — so you can print and revise before your viva?

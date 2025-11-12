@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+#define N 5
+
+int q[N], front=-1, rear=-1;
+
+void enqueue(int x){
+    if((front==0 && rear==N-1) || (rear+1)%N==front) cout<<"Full\n";
+    else{
+        if(front==-1) front=0;
+        rear=(rear+1)%N;
+        q[rear]=x;
+        cout<<"Added "<<x<<endl;
+    }
+}
+
+void dequeue(){
+    if(front==-1) cout<<"Empty\n";
+    else{
+        cout<<"Removed "<<q[front]<<endl;
+        if(front==rear) front=rear=-1;
+        else front=(front+1)%N;
+    }
+}
+
+void display(){
+    if(front==-1) cout<<"Empty\n";
+    else{
+        cout<<"Queue: ";
+        int i=front;
+        while(true){
+            cout<<q[i]<<" ";
+            if(i==rear) break;
+            i=(i+1)%N;
+        }
+        cout<<endl;
+    }
+}
+
+int main(){
+    enqueue(10); enqueue(20); enqueue(30);
+    display();
+    dequeue();
+    display();
+    enqueue(40); enqueue(50); enqueue(60);
+    display();
+}

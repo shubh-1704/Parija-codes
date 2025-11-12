@@ -1,0 +1,96 @@
+o design and implement a C++ program that:
+
+
+Stores 5 student records (ID, Name, CGPA) using dynamic memory allocation.
+
+
+Displays all records.
+
+
+Searches a student using Linear Search and Binary Search.
+
+
+Sorts records by ID using Bubble Sort.
+
+
+
+🧠 Algorithm (Step-by-Step):
+1️⃣ Start
+2️⃣ Declare a structure Student with members: id, name, and cgpa.
+3️⃣ Dynamically allocate memory for 5 students using new.
+4️⃣ Input id, name, and cgpa for each student.
+5️⃣ Display all student records.
+6️⃣ Enter an ID to search.
+7️⃣ Perform Linear Search → if found, display record, else show “Not found”.
+8️⃣ Sort records by ID using Bubble Sort.
+9️⃣ Perform Binary Search → if found, display record, else show “Not found”.
+🔟 Free memory using delete[].
+11️⃣ End
+
+🔁 Flowchart (Text Format)
+         ┌────────────────────┐
+         │      Start          │
+         └───────┬────────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Define Structure     │
+      │ (id, name, cgpa)     │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Allocate Memory for  │
+      │ 5 Students (new)     │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Input ID, Name,     │
+      │ CGPA for each        │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Display All Records  │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Enter ID to Search   │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Linear Search by ID  │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Sort by ID (Bubble)  │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Binary Search by ID  │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Display Result       │
+      └──────────┬──────────┘
+                 │
+      ┌──────────▼──────────┐
+      │ Delete Memory, End   │
+      └──────────────────────┘
+
+
+🧾 Sample Output:
+ID:101
+Name:Raj
+CGPA:8.5
+ID:102
+Name:Neha
+CGPA:9.2
+...
+All Records:
+101 Raj 8.5
+102 Neha 9.2
+
+Enter ID to search: 102
+Found by Linear Search: Neha
+Found by Binary Search: Neha
+
+
+Would you like me to create this explanation and flowchart neatly formatted as a PDF report for submission?
